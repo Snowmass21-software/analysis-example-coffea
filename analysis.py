@@ -41,3 +41,5 @@ result = processor.run_uproot_job(
     processor.iterative_executor,
     {"schema": DelphesSchema},
 )
+
+result.to_hist()['100TeV_B', :].show()
