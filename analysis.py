@@ -37,7 +37,7 @@ samples = {
 result = processor.run_uproot_job(
     samples,
     "Delphes",
-    MyZPeak(),
+    MyJetMass(),
     processor.iterative_executor,
     {"schema": DelphesSchema},
 )
