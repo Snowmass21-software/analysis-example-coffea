@@ -32,7 +32,7 @@ The following branches are not interpretable by coffea just yet:
   - `SoftDroppedSubJet2`
   - `TrimmedP4[5]`
 
-But work is on-going, see coffeateam/coffea#584 .
+But work is on-going, see [coffeateam/coffea#584](https://github.com/CoffeaTeam/coffea/pull/584/).
 
 ## Running
 
