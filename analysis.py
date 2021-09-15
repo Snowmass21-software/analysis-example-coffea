@@ -31,7 +31,7 @@ class MyJetMass(processor.ProcessorABC):
         return accumulator
 
 samples = {
-    "100TeV_B": list(pathlib.Path("/collab/project/snowmass21/data/smmc/v0.1/r1/100TeV_B.tar.gz/delphesstep/").glob("*.root"))
+    "100TeV_B": list(map(str, pathlib.Path("/collab/project/snowmass21/data/smmc/v0.1/r1/100TeV_B.tar.gz/delphesstep/").glob("*.root")))
 }
 
 result = processor.run_uproot_job(
