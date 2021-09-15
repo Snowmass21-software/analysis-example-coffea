@@ -88,13 +88,15 @@ which outputs a histogram using `histoprint`. For one Delphes file, one sees
  1.00e+03 _
 ```
 
-which takes about 2 seconds to run. For all 350+ files in one of the samples, it takes a little over 3 hours:
+which takes about 2 seconds to run. For all 350+ files in one of the samples, it takes a little over 1 hour with 16 cores:
 
 ```
-$ time python3 analysis.py
- 0.00e+00 _                             1.65e+07 ╷
- 2.50e+01 _███████████████████████████████████████
- 5.00e+01 _█
+$ time python analysis.py
+Preprocessing: 100%|███████████████████████████████████████████████████████████████████████████████| 352/352 [00:33<00:00, 10.44file/s]
+Processing:  27%|█████████████████████▉                                                            | 94/352 [17:53<32:03,  7.46s/chunk]Processing: 100%|███████████████████████████████████████████████████████████████████████████████| 352/352 [1:03:01<00:00, 10.74s/chunk]
+ 0.00e+00 _                                                                                                                 1.20e+03 ╷
+ 2.50e+01 _███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+ 5.00e+01 _██
  7.50e+01 _
  1.00e+02 _
  1.25e+02 _
@@ -134,7 +136,7 @@ $ time python3 analysis.py
  9.75e+02 _
  1.00e+03 _
 
-real	182m44.441s
-user	8m8.328s
-sys	0m13.934s
+real	63m38.282s
+user	22m50.256s
+sys	10m19.134s
 ```
