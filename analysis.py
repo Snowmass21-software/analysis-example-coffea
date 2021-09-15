@@ -38,8 +38,8 @@ result = processor.run_uproot_job(
     samples,
     "Delphes",
     MyJetMass(),
-    processor.iterative_executor,
-    {"schema": DelphesSchema},
+    processor.futures_executor,
+    {"schema": DelphesSchema, "workers": 16},
 )
 
 result.to_hist()['100TeV_B', :].show()
