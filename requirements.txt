@@ -1,1 +1,1 @@
-git+git://github.com/kratsg/coffea.git@25c805fdd96cc1d6b279aa48242dd6caf17e0aed
+coffea>=0.7.8

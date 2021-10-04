@@ -19,20 +19,16 @@ python -m pip install -r requirements.txt
 
 ## Caveats
 
-The following branches are not interpretable by coffea just yet:
+The following branches are accessible via python-friendly names
 
-  - `Area`
-  - `Constituents`
-  - `Particle`
-  - `Particles`
-  - `PrunedP4[5]`
-  - `SoftDroppedJet`
-  - `SoftDroppedP4[5]`
-  - `SoftDroppedSubJet1`
-  - `SoftDroppedSubJet2`
-  - `TrimmedP4[5]`
+  - `TauPt[4]` is mapped to `TauPt_4`
+  - `PrunedP4[5]` is mapped to `PrunedP4_5`
+  - `SoftDroppedP4[5]` is mapped to `SoftDroppedP4_5`
+  - `TrimmedP4[5]` is mapped to `TrimmedP4_5`
 
-But work is on-going, see [coffeateam/coffea#584](https://github.com/CoffeaTeam/coffea/pull/584/).
+Finally, all branches related to indexing (e.g. linking to other objects, particles, constituents, etc) are not done. The reason for this is that generally, Delphes has some pruning applied and the recommended way of matching particles is via Delta-R matching instead.
+
+See [coffeateam/coffea#584](https://github.com/CoffeaTeam/coffea/pull/584/) for details of the initial implementation of the Delphes schema in `coffea`.
 
 ## Running
 
